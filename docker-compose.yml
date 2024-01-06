@@ -4,6 +4,11 @@ services:
   app:
     build:
       context: .
+      args:
+        - Dev=true
+
+        
+      
     ports:
       - "8000:8000"
     volumes:

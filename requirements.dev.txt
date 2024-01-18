@@ -1,3 +1,3 @@
-#note: adding a custom step to the build so that I only install and run this for my local environment. It's inly for development purposes.
-flake>=3.9.2,<3.10
+#NOTE: adding a custom step to the build so that I only install and run this for my local environment. It's only for development purposes.
+flake8>=3.9.2,<3.10
 

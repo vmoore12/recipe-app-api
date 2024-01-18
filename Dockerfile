@@ -3,11 +3,11 @@ LABEL maintainer="vickie.moore26@gmail.com"
 
 ENV PYTHONUNBUFFERED 1
 
-# This copies the requirments file into docker image
+## This copies the requirments file into docker image
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./requirements.dev.txt /tmp/requirements.dev.txt
 COPY ./app /app
-# This sets the working directory
+## This sets the working directory
 WORKDIR /app
 EXPOSE 8000
 

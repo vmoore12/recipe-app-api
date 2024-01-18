@@ -1,6 +1,6 @@
+--- 
 #NOTE: Configuration for Github Actions
 
---- 
 name: Checks
 
 on: [push] ## Trigger the jobs below to run. Every time we push to Github. 

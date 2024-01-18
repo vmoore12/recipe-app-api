@@ -1,0 +1,27 @@
+--- 
+#NOTE: Configuration for Github Actions
+
+name: Checks
+
+on: [push] ## Trigger the jobs below to run. Every time we push to Github. 
+
+jobs:
+  test-lint: ## Name of the job to run
+    name: Test and Lint
+    runs-on: ubuntu-20.04  ## Operating system that the job will run on. Docker-compose comes pre-installed on Ubuntu. 
+    steps:
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+         username: ${{ secrets.DOCKERHUB_USER }}
+         password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Checkout ## make sure the code is available to run the next step on.
+        uses: actions/checkout@v2
+      - name: Test
+        run: docker-compose run --rm app sh -c "python manage.py test"
+      - name: Lint
+        run: docker-compose run --rm app sh -c "flake8"
+        ## hello 2
+
+
+

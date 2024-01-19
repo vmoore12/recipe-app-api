@@ -156,6 +156,10 @@ cython_debug/
 
 .gitignore
 
+.json
+.DS_Store
+.VSCODE
+
 
 
 # PyCharm
